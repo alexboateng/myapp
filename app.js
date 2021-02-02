@@ -26,16 +26,13 @@ app.use('/', indexRouter);
 // app.use('/users', usersRouter);
 app.use('/icd', icdRouter);
 app.use('/icdversion', icdVersion);
-// mongodb+srv://xelahaippa:4ppi4h44@cluster0.oevxs.mongodb.net/Cluster0?retryWrites=true&w=majority
-// mongodb+srv://xelahaippa:4ppi4h44@motopro.sfml6.mongodb.net/motopro?retryWrites=true&w=majority
 
 mongoose.connect(`mongodb+srv://xelahaippa:4ppi4h44@cluster0.oevxs.mongodb.net/Cluster0?retryWrites=true&w=majority`, { 
     useUnifiedTopology: true,
     useNewUrlParser: true
  })
-//mongoose.connect(`mongodb://xelahaippa:4ppi4h44@ds149914.mlab.com:49914/motopro`, { useNewUrlParser: true })
-//mongoose.connect('mongodb://localhost/motopro', { useNewUrlParser: true })
-    .then(() => console.log('connected'))
+ 
+    .then(() => console.log('connected, App running'))
     .catch((err) => console.log('error', err));
 mongoose.set('useCreateIndex', true);
 mongoose.set('useFindAndModify', false);   
