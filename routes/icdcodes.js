@@ -273,7 +273,7 @@ router.get('/:appVersion', (req, res) => {
                             res.json({
                                 status: 'success',
                                 page: req.query.page,
-                                msg: icdData,
+                                msg: icdData, 
                             });
                     });
             }
